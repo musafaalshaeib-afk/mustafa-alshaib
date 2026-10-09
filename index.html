@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>KijkHulp - Rustige en eenvoudige computerhulp</title>
+    <meta name="description" content="Eenvoudige, geduldige computerhulp voor senioren en beginners met één-stap-tegelijk begeleiding en beeldherkenning." />
+    <meta property="og:title" content="KijkHulp - Rustige en eenvoudige computerhulp" />
+    <meta property="og:description" content="Eenvoudige, geduldige computerhulp voor senioren en beginners met één-stap-tegelijk begeleiding en beeldherkenning." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1e3a8a" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="KijkHulp" />
+    <script>
+      // Prevent Vite HMR WebSocket connection errors from causing unhandled rejection console errors
+      window.addEventListener('unhandledrejection', function(event) {
+        if (event.reason && (String(event.reason.message || event.reason).includes('WebSocket') || String(event.reason.message || event.reason).includes('vite'))) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 min-h-screen font-sans antialiased selection:bg-amber-200 selection:text-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

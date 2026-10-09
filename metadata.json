@@ -1,0 +1,11 @@
+{
+  "name": "Remix KijkHulp",
+  "description": "Eenvoudige, geduldige computerhulp voor senioren en beginners met één-stap-tegelijk begeleiding en beeldherkenning.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

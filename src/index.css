@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    user-select: text;
+    touch-action: manipulation;
+  }
+}
+
+.safe-area-bottom {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+@media print {
+  /* Hide all app elements by default */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* Show only the printable stappenplan area */
+  .printable-stappenplan,
+  .printable-stappenplan * {
+    visibility: visible;
+  }
+
+  .printable-stappenplan {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1.5cm !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-step-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
